@@ -1,42 +1,162 @@
-h1 {
-    border-bottom: solid 2px black;
-    padding-bottom: 14px;
-    margin-bottom: 1.5em;
-    color: #1bb9c2;
+* {
+    margin: 0; /* todos los elementos comienzan sin margen */
+    padding: 0;
+    box-sizing: border-box; /* además el apding y border se uncluye en el width height, obteniendo elementos más estéticos https://www.w3schools.com/css/css3_box-sizing.asp */  
+    /* Stext-align: center; */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-image: url('img/TW_wallpaper_S.jpg'); /* Imagen de fondo, cubre toda la pantalla desde el centro y al bajar el ratón se queda quieta*/
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex; /* si ponía inline, cuando el main no ocupa toda la pantalla el footer subía: Displays an element as a block-level flex container */
+    /* ModGPT1: modificacion gpt para arreglar el footer en guias y estrategias */
+    flex-direction: column;
+    min-height: 100vh; /* ModGPT1: modificacion gpt para arreglar el footer en guias y estrategias */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
     text-align: center;
 }
 
-h2 {
-    border-bottom: dotted 1px #1bb9c2;
-    padding-bottom: 10px;
-    margin-bottom: 1.5em;
-    margin-top: 2em;
+header h1 {
+    font-size: 2.5em;
+    margin: 5px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none; /* quita las líneas de la lista */
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ff6347; /* cuando pones el raton encima cambia de color las letras */
+}
+
+main {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+    border-radius: 8px; /* borde redondeado, así no es tan afilado, más moderno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 0 movimiento de la sobra, 4 abajo y 8 de difuminado en negro muy transparente */
+    padding: 20px;
+    width: 60%; /* así no ocupa toda la pantalla, está por el centro */
+    margin: 20px auto; /* Centrar el contenido */
+    flex-grow: 1; /* ModGPT1: modificacion gpt para arreglar el footer en guias y estrategias */
+    max-width: 800px; /* Ancho maximo, asi si se pasa, se mantiene de un tamaño normal aunque la pantalla sea muy larga/ancha*/
+}
+
+#bienvenida {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+main p {
+    text-align: justify;
+}
+
+.h3-tbr {
+    border-bottom: dashed 1px #333;
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+
+.h2-tbr {
+    border-bottom: solid 1px #333;
+    margin-bottom: 10px;
+    padding-top: 5px;
+}
+
+table {
+    width: 100%; /* así ocupa tda el ancho de main, aunque no tenga contenido suficiente */
+    border-collapse: collapse; /* mquita el espacio entre tablas */
+    margin: 20px 0px; 
+}
+
+th, td {
+    border: 1px solid #333;
+    padding: 10px;
     text-align: left;
-    width: 80%;
 }
 
-p {
-    margin-left:40px;
-    line-height: 1.5em;
-
+th {
+    background-color: rgba(255, 215, 0, 0.2); /* Fondo para los títulos */
 }
 
-a {
-    color: #1bb9c2;
-    font-weight: 700;
+fieldset {
+    border: 1px solid #333;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 4px;
 }
 
-div{
-    background-color: white;
-    color: dimgrey;
+legend {
+    font-weight: bold;
+    color: #333;
 }
 
-body{
-    background-color: #dcdbdb;
-    font-family: arial, sans-serif;
-    margin-top: 100px;
-    margin-left: 200px;
-    padding: 5px;
-    border: solid 2px black;
-    width: 800px;
+label {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select { /* Cajas bonitas de texto */
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+input[type="submit"] { /* boton enviar bonito */
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    display: block;
+    margin: 20px auto;
+}
+
+input[type="submit"]:hover {
+    background-color: #555;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+
+#guia-lista {
+    padding: 20px; /* lista separada del borde */
+}
+
+@media (max-width: 768px) {
+    main {
+        width: 90%; /* Aumentar el tamaño para que en pantallas pequeñas se vea */
+    }
 }

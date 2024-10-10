@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang = "es">
+
+<head>
+    <title>Warhammer Total War 2 - Cuestionario</title>
+    <link rel = "icon" href = "img/WHTWII_icon.jpg">
+    <meta charset = "UTF-8">
+    <link rel = "stylesheet" href = "styles.css">
+    <meta name = "descripcion" content = "Página web fanmade por Iker Cubillo sobre
+    Warhammer Total War II para la asignatura de ingeniería Web. Página principal, contiene guías y estratégias del juego">
+</head>
+<body>
+    <header>
+        <h1>Cuestionario: ¿Qué Facción es para Ti?</h1>
+        <nav>
+            <ul>
+                <li><a href = "index.html">Inicio</a></li>
+                <li><a href = "razas.html">Razas e Historia</a></li>
+                <li><a href = "guia.html">Guías y Estrategias</a></li>
+                <li><a href = "cuestionario.html">Cuestionario</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form id = "cuestionario-form">
+            <fieldset>
+                <legend>Datos del Jugador</legend>
+                
+                <label for = "nombre">Nombre:</label>
+                <input type = "text" name = "nombre" id = "nombre" required>
+                <br><br>
+
+                <p>¿Te consideras un jugador experimentado?</p>
+                <input type = "radio" id = "jugador-exp-S" name = "jugador-exp" value = "si" checked>
+                <label for = "jugador-exp-S">Sí</label>
+                <input type = "radio" id = "jugador-exp-N" name = "jugador-exp" value = "no">
+                <label for = "jugador-exp-N">No</label>
+                <br><br>
+
+                <label for = "email">Email:</label>
+                <input type = "email" name = "email" id = "email" required>
+                <br><br>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Preferencias de Juego</legend>
+
+                <div>
+                    <label for = "faccion">¿Con qué facción has jugado más?</label>
+                    <select id = "faccion" name = "faccion">
+                        <option value = "altos-elfos">Altos Elfos</option>
+                        <option value = "hombres-lagarto">Hombres Lagarto</option>
+                        <option value = "skaven">Skaven</option>
+                        <option value = "elfos-oscuros">Elfos Oscuros</option>
+                    </select>
+                </div>
+                <br><br>
+
+                <div>
+                    <label for = "magia">1. ¿Prefieres la magia o el combate cuerpo a cuerpo?</label><br>
+                    <input type = "radio" id = "magia" name = "pregunta1" value = "magia">
+                    <label for = "magia">Magia</label><br>
+                    <input type = "radio" id = "combate" name = "pregunta1" value = "combate">
+                    <label for = "combate">Combate cuerpo a cuerpo</label>
+                </div>
+                <br>
+
+                <div>
+                    <label for = "rapidas">2. ¿Te gustan los ejércitos con unidades rápidas o lentas pero poderosas?</label><br>
+                    <input type = "radio" id = "rapidas" name = "pregunta2" value = "rapidas">
+                    <label for = "rapidas">Rápidas</label><br>
+                    <input type = "radio" id = "lentas" name = "pregunta2" value = "lentas">
+                    <label for = "lentas">Lentas pero poderosas</label>
+                </div>
+                <br>
+
+                <div>
+                    <label for = "prolongadas">3. ¿Prefieres batallas prolongadas o rápidas y decisivas?</label><br>
+                    <input type = "radio" id = "prolongadas" name = "pregunta3" value = "prolongadas">
+                    <label for = "prolongadas">Prolongadas</label><br>
+                    <input type = "radio" id = "b_rapidas" name = "pregunta3" value = "b_rapidas">
+                    <label for = "b_rapidas">Rápidas y decisivas</label>
+                </div>
+                <br>
+
+                <div>
+                    <label for = "monstruosas">4. ¿Te gusta jugar con criaturas monstruosas o prefieres unidades más tácticas?</label><br>
+                    <input type = "radio" id = "monstruosas" name = "pregunta4" value = "monstruosas">
+                    <label for = "monstruosas">Criaturas monstruosas</label><br>
+                    <input type = "radio" id = "tacticas" name = "pregunta4" value = "tacticas">
+                    <label for = "tacticas">Unidades tácticas</label>
+                </div>
+                <br>
+
+                <div>
+                    <label for = "agresivo">5. ¿Qué estilo de juego prefieres?</label><br>
+                    <input type = "radio" id = "agresivo" name = "pregunta5" value = "agresivo">
+                    <label for = "agresivo">Agresivo y ofensivo</label><br>
+                    <input type = "radio" id = "defensivo" name = "pregunta5" value = "defensivo">
+                    <label for = "defensivo">Defensivo y estratégico</label>
+                </div>
+                <br>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Aceptación de condiciones</legend>
+                
+                <input type = "checkbox" name = "condiciones" id = "condiciones" value = "1" required>
+                <label for = "condiciones">Acepto los términos y condiciones</label>
+                <br><br>
+
+                <input type = "submit" name = "enviar" value = "ENVIAR">
+            </fieldset>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Warhammer Total War 2 Fan Page</p>
+    </footer>
+</body>
+</html>
